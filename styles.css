@@ -1,30 +1,59 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
     font-size: 100%;
 }
 
-header {
+body {
     background-image:linear-gradient(rgba(166, 15, 35, 0.5), rgba(166, 15, 35, 0.5)), url(./assets/backdrop1edited.png);
     height: 100vh;
     background-size: cover;
     background-position: center;
 }
 
-ul {
-    float: right;
-    list-style-type: none;
-    margin-top: 50px;
-    margin-left: 100px;
+section {
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
 }
 
-ul li {
-    display: inline-block;
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .logo{
+    position: relative;
+    max-width: 100px;
+    height: auto;
+    margin-top: 20px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style-type: none;
     padding: 0px 25px;
 }
 
-ul li a {
+header ul li a {
+    display: inline-block;
     text-decoration: none;
     color: #fff;
     padding: 10px 20px;
@@ -32,58 +61,123 @@ ul li a {
     transition: 0.6s ease;
 }
 
-ul li a:hover {
+header ul li a:hover {
     background-color: #fff;
-    color: #000;
+    color: rgb(166, 15, 35);
 }
 
-ul li.active a{
+header ul li.active a{
     background-color: #fff;
+    color: rgb(166, 15, 35);
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin-left: 8%;
+}
+
+.title-box{
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 8rem;
+    width: 30%;
+}
+
+.title-box h1{
+    color: #fff;
+    font-size: 50px;
+}
+
+.title-box h2 {
     color: #000;
+    font-size: 20px;
 }
 
-.logo img{
-    float: left;
-    width: 100px;
-    height: auto;
-    margin-top: 20px;
+.wine-stuff {
+    display: flex;
+    width: 30%;
+    top: 20%;
+    left: 38%;
 }
 
-.main{
-    max-width: 1200px;
-    margin: auto;
-}
-
-.title{
-    position: absolute;
-    top: 30%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-}
-
-.title h1{
-    color: #000;
-    font-size: 70px;
+.wine-stuff > div {
+    margin: 45px;
 }
 
 .winebottle img{
-    position: absolute;
-    width: 125px;
+    position: relative;
+    width: 100px;
     height: auto;
-    margin-top: 25%;
-    margin-left: 20%;
 }
 
 .wineglass img{
-    position: absolute;
-    width: 125px;
-    height: auto;
-    margin-top: 23%;
-    margin-left: 45%;
+    position: relative;
+    width: 100px;
+    height: 99%;
+}
+
+.home-lyric-box {
+    position: relative;
+    width: 40%;
+    margin-bottom: 5rem;
+}
+
+.home-lyric-box p{
+    line-height: 1.5;
+    font-size: 110%;
+}
+
+#about {
+    padding: 0;
+}
+
+.about-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background:rgb(187, 97, 109);
+}
+
+.about-lyric-box {
+    height: 33%;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.box1{
+    width: 100%;
+    border-bottom: 2px solid rgb(80, 38, 44);
+    padding: 90px 200px;
+    flex-direction: row;
+ 
+}
+
+.box1 img {
+    display: flex;
+    position: relative;
+}
+
+.box2{
+    width: 100%;
+    border-bottom: 2px solid rgb(80, 38, 44);
+    text-align: right;
+    padding: 110px 200px;
+  
+}
+.box3{
+    width: 100%;
+    padding: 120px 200px;
+
 }
 
 .button{
-    position: absolute;
+    position: relative;
     top: 93%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -99,5 +193,5 @@ ul li.active a{
 
 .btn:hover{
     background-color: #fff;
-    color: #000;
+    color: rgb(166, 15, 35);
 }
